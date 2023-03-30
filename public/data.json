@@ -1,0 +1,38 @@
+[
+    {
+      "id": "6425c00fa791c5347fffd4d8",
+      "cover_image": "https://img.freepik.com/free-photo/opened-ai-chat-laptop_1268-21506.jpg?w=996&t=st=1680196986~exp=1680197586~hmac=85f3f9a0a84b49d84c8f37fe337e68287afd81222afbbf091edd0f981ac5242a",
+      "author_image": "https://img.freepik.com/free-photo/confident-athletic-guy-cross-arms-chest-smiling_176420-18838.jpg?w=996&t=st=1680196839~exp=1680197439~hmac=0bee498136aef83852fdfab914b380d3ba86d05062ff50365cda51c1bc3ef690",
+      "read_time": 15,
+      "author": "Mccarty Russell",
+      "title": "Conversational AI: a threat or blessing?",
+      "published_date": "March 19, 2023"
+    },
+    {
+      "id": "6425c00f9338e54b16922258",
+      "cover_image": "https://img.freepik.com/free-photo/html-css-collage-concept_23-2150061955.jpg?w=996&t=st=1680197167~exp=1680197767~hmac=b6638234dfd53f89e6de6f939a9744a148eb14ff7dd5d69ea9bc64a134b78541",
+      "author_image": "https://img.freepik.com/free-photo/portrait-seriouslooking-determined-young-african-american-guy-with-bristle-cross-hands-chest-looking-confident-ready-action-starting-own-business-stand-white-background_176420-52653.jpg?w=996&t=st=1680196894~exp=1680197494~hmac=977ab5f29368754e616840bd913eba43e7b3c125c4edee69ea1e25d6e75352d8",
+      "read_time": 12,
+      "author": "Ruth Gamble",
+      "title": "How to learn any skill efficiently using chatGPT",
+      "published_date": "April 01, 2023"
+    },
+    {
+      "id": "6425c00facb1685dc83cac88",
+      "cover_image": "https://img.freepik.com/free-photo/rpa-concept-with-blurry-hand-touching-screen_23-2149311914.jpg?w=996&t=st=1680197329~exp=1680197929~hmac=e5bd2e5182d9942b32ef4f932c0b0b4d1e8ddf6005e1a3683b536170f88fc994",
+      "author_image": "https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg",
+      "read_time": 10,
+      "author": "Claudia Compton",
+      "title": "Top 5 business ideas using GPT-4",
+      "published_date": "December 11, 2022"
+    },
+    {
+      "id": "6425c00f14b0f5df2406f863",
+      "cover_image": "https://img.freepik.com/free-photo/close-up-man-writing-code-laptop_158595-5169.jpg?w=996&t=st=1680197470~exp=1680198070~hmac=e02b4951f0bb442c09b2c808f95acb25160f33d51428ebffd1562c70942e5acd",
+      "author_image": "https://img.freepik.com/free-photo/close-up-confident-male-employee-white-collar-shirt-smiling-camera-standing-self-assured-against-studio-background_1258-26761.jpg",
+      "read_time": 20,
+      "author": "Lynette Clemons",
+      "title": "9 skills you should learn now",
+      "published_date": "August 28, 2022"
+    }
+  ]
