@@ -1,0 +1,14 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+
+}
+
+.navbar a{
+    text-decoration: none;
+    margin-left: 20px;
+}
