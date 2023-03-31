@@ -5,6 +5,6 @@
     text-align: left;
 }  
 
-.footer p{
+.footer p,ul{
     margin-bottom: 50px;
 }

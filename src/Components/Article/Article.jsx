@@ -4,8 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Article = (props) => {
-    console.log(props.article)
+
     const {cover_image, author_image, read_time, author, title, published_date}= props.article;
+    const increaseReadTime= props.increaseReadTime
+    
     return (
         <div className='article-container'>
             <img src={cover_image} alt="" />
@@ -24,7 +26,7 @@ const Article = (props) => {
 
             <h2>{title}</h2>
             <p>#beginners #programming</p>
-            <a href="/read">Mark as read</a>
+            <button onClick={() => increaseReadTime(props.article)}>Mark as read</button>
         </div>
     );
 
