@@ -8,3 +8,10 @@
 .footer p,ul{
     margin-bottom: 50px;
 }
+
+/*phone devices*/
+@media only screen and (max-width:688px) {
+    .footer{
+        padding: 20px;
+    }
+}

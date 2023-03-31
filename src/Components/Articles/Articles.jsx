@@ -5,7 +5,7 @@ import './Articles.css'
 
 const Articles = () => {
     const [articles, setArticles]= useState([]);
-    const [totalTime, setTotalTime]= useState([]);
+    const [totalTime, setTotalTime]= useState(0);
 
     useEffect(() =>{
         fetch('data.json')
@@ -14,11 +14,10 @@ const Articles = () => {
     }, [])
     
     const increaseReadTime= article =>{
-        console.log(article)
-        let previousTime= 0;
-        let updatedTime= previousTime + article.read_time;
-        previousTime= updatedTime
-        console.log(previousTime)
+        console.log(article.read_time)
+        let updatedTime= 0;
+        updatedTime= totalTime + article.read_time;
+        console.log(updatedTime)
         setTotalTime(updatedTime)
     }
 

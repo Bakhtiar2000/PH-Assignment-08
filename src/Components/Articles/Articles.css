@@ -2,3 +2,13 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
 }
+
+/*phone devices*/
+@media only screen and (max-width:688px) {
+    .articles-container{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 90%;
+    }
+}

@@ -5,10 +5,21 @@
     padding-left: 40px;
     padding-right: 40px;
     border-bottom: 1px solid rgba(17, 17, 17, 0.15);
-
 }
 
 .navbar a{
     text-decoration: none;
     margin-left: 20px;
+}
+
+/*phone devices*/
+@media only screen and (max-width:688px) {
+    .navbar{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .navbar a{
+        display: flex;
+        flex-direction: column;
+    }
 }
