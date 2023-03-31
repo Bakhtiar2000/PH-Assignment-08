@@ -7,6 +7,7 @@ const Article = (props) => {
 
     const {cover_image, author_image, read_time, author, title, published_date}= props.article;
     const increaseReadTime= props.increaseReadTime
+    const handleBookmark= props.handleBookmark
 
     return (
         <div className='article-container'>
@@ -20,7 +21,7 @@ const Article = (props) => {
                     </div>
                 </div>
                 <p>
-                    {read_time} min read  <FontAwesomeIcon icon={faBookmark} onClick={() => increaseReadTime(props.article)}/>
+                    {read_time} min read  <FontAwesomeIcon icon={faBookmark} onClick={() => handleBookmark(props.article)}/>
                 </p>
             </div>
 

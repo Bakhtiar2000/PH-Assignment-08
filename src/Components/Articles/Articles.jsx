@@ -6,6 +6,8 @@ import './Articles.css'
 const Articles = () => {
     const [articles, setArticles]= useState([]);
     const [totalTime, setTotalTime]= useState(0);
+    const [bookMark, setBookMark]= useState([]);
+    const [count, setCount]= useState(0);
 
     useEffect(() =>{
         fetch('data.json')
@@ -14,11 +16,19 @@ const Articles = () => {
     }, [])
     
     const increaseReadTime= article =>{
-        console.log(article.read_time)
         let updatedTime= 0;
         updatedTime= totalTime + article.read_time;
-        console.log(updatedTime)
         setTotalTime(updatedTime)
+    }
+
+    const handleBookmark = article=>{
+        console.log(article)
+        let updateBookmark=[];
+        let bookmarkCount= 0;
+        updateBookmark= [...bookMark , article.title]
+        bookmarkCount= count + 1;
+        setBookMark(updateBookmark)
+        setCount(bookmarkCount)
     }
 
     return (
@@ -29,11 +39,16 @@ const Articles = () => {
                     article= {article}
                     key={article.id}
                     increaseReadTime={increaseReadTime}
+                    handleBookmark={handleBookmark}
                 ></Article>)
             } 
             </div>
             <div>
-                <Sidebar totalTime={totalTime}></Sidebar>
+                <Sidebar 
+                totalTime={totalTime}
+                bookMark={bookMark}
+                count={count}
+                ></Sidebar>
             </div>
         </div>
     );
