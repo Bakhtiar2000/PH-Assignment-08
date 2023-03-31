@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Article from '../Article/Article';
+import Sidebar from '../Sidebar/Sidebar';
 import './Articles.css'
 const Articles = () => {
     const [articles, setArticles]= useState([]);
@@ -11,14 +12,18 @@ const Articles = () => {
     }, [])
 
     return (
-        <div>
-            <h2>Hello from {articles.length} articles</h2>
+        <div className='articles-container'>
+            <div>
             {
                 articles.map(article=> <Article 
                     article= {article}
                     key={article.id}
                 ></Article>)
             } 
+            </div>
+            <div>
+                <Sidebar></Sidebar>
+            </div>
         </div>
     );
 

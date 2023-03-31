@@ -1,9 +1,16 @@
 import React from 'react';
 import './Sidebar.css'
-const Sidebar = () => {
+const Sidebar = (props) => {
     return (
-        <div>
-            
+        <div className='sidebar'>
+            <div className='spent-time'>
+                <h4>Spent time on read:{} </h4>
+            </div>
+            <div className='bookmarked'>
+                <h2>Bookmarked Blogs:{}</h2>
+
+
+            </div>
         </div>
     );
 };

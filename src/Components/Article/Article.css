@@ -1,0 +1,36 @@
+.article-container{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.article-container img{
+    width: 100%;
+    text-align: center;
+}
+
+.profile-container{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-container img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile h3, h6{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
