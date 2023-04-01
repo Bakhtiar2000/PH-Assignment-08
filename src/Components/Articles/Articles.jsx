@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Article from '../Article/Article';
 import Sidebar from '../Sidebar/Sidebar';
 import './Articles.css'
@@ -42,7 +42,7 @@ const Articles = () => {
 
         if (clickCount >= 1) {
             console.log(clickCount)
-            toast.error('Button clicked too many times!');
+            toast.warning('This article is already in the bookmark');
         }
     }
 
@@ -66,6 +66,7 @@ const Articles = () => {
                     toastCount={toastCount}
                 ></Sidebar>
             </div>
+            <ToastContainer />
         </div>
     );
 
