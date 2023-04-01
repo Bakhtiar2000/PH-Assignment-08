@@ -2,7 +2,15 @@ import React from 'react';
 import './Sidebar.css'
 const Sidebar = (props) => {
     console.log(props)
-   
+
+    // const para = [];
+    // for (let i = 0; i < props.bookMark.length; i++) {
+    //     para.push(React.createElement('p', { key: i }, `Paragraph ${i + 1}`));
+    // }
+
+
+    // const Para = p => React.createElement('p', { className: "bookmark-title" }, `${props.bookMark}`)
+
     return (
         <div className='sidebar'>
             <div className='spent-time'>
@@ -11,12 +19,9 @@ const Sidebar = (props) => {
             <div className='bookmark-container'>
                 <h2>Bookmarked Blogs: {props.bookmarkCount}</h2>
                 <div className='bookmark-list'>
-                    <p>{props.bookMark[0]}</p>
-                    <p>{props.bookMark[1]}</p>
-                    <p>{props.bookMark[2]}</p>
-                    <p>{props.bookMark[3]}</p>
-                    <p>{props.bookMark[4]}</p>
-                    <p>{props.bookMark[5]}</p>
+                    {
+                        props.bookMark.map(title => <p> {title} </p>)
+                    }
                 </div>
 
 
