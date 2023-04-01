@@ -1,53 +1,69 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 import Article from '../Article/Article';
 import Sidebar from '../Sidebar/Sidebar';
 import './Articles.css'
 
 const Articles = () => {
-    const [articles, setArticles]= useState([]);
-    const [totalTime, setTotalTime]= useState(0);
-    const [bookMark, setBookMark]= useState([]);
-    const [count, setCount]= useState(0);
+    const [articles, setArticles] = useState([]);
+    const [totalTime, setTotalTime] = useState(0);
+    const [bookMark, setBookMark] = useState([]);
+    const [bookmarkCount, setBookmarkCount] = useState(0);
+    const [toastCount, setToastCount] = useState(0);
 
-    useEffect(() =>{
+    useEffect(() => {
         fetch('data.json')
-        .then(res=> res.json())
-        .then(data=>setArticles(data))
+            .then(res => res.json())
+            .then(data => setArticles(data))
     }, [])
-    
-    const increaseReadTime= article =>{
-        let updatedTime= 0;
-        updatedTime= totalTime + article.read_time;
+
+    const increaseReadTime = article => {
+        let updatedTime = 0;
+        updatedTime = totalTime + article.read_time;
         setTotalTime(updatedTime)
     }
 
-    const handleBookmark = article=>{
+    const handleBookmark = article => {
         console.log(article)
-        let updateBookmark=[];
-        let bookmarkCount= 0;
-        updateBookmark= [...bookMark , article.title]
-        bookmarkCount= count + 1;
+
+        let updateBookmark = [];
+        updateBookmark = [...bookMark, article.title]
         setBookMark(updateBookmark)
-        setCount(bookmarkCount)
+
+        setBookmarkCount(bookmarkCount + 1)
+
+        setToastCount(prevCounts => {
+            const newCounts = { ...prevCounts };
+            newCounts[article.id] = (newCounts[article.id] || 0) + 1;
+            return newCounts;
+        });
+        const clickCount = toastCount[article.id] || 0;
+
+        if (clickCount >= 1) {
+            console.log(clickCount)
+            toast.error('Button clicked too many times!');
+        }
     }
 
     return (
         <div className='articles-container'>
             <div>
-            {
-                articles.map(article=> <Article 
-                    article= {article}
-                    key={article.id}
-                    increaseReadTime={increaseReadTime}
-                    handleBookmark={handleBookmark}
-                ></Article>)
-            } 
+                {
+                    articles.map(article => <Article
+                        article={article}
+                        key={article.id}
+                        increaseReadTime={increaseReadTime}
+                        handleBookmark={handleBookmark}
+                    ></Article>)
+                }
             </div>
             <div>
-                <Sidebar 
-                totalTime={totalTime}
-                bookMark={bookMark}
-                count={count}
+                <Sidebar
+                    totalTime={totalTime}
+                    bookMark={bookMark}
+                    bookmarkCount={bookmarkCount}
+                    toastCount={toastCount}
                 ></Sidebar>
             </div>
         </div>

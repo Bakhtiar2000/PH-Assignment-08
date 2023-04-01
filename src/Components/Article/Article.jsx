@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Article = (props) => {
-
     const {cover_image, author_image, read_time, author, title, published_date}= props.article;
     const increaseReadTime= props.increaseReadTime
     const handleBookmark= props.handleBookmark
